@@ -1,5 +1,5 @@
 <div>
-<h2>Book detail</h2>
+ <h2>Book detail</h2>
  <table class="table">
   <tbody>
     <tr>
@@ -16,11 +16,12 @@
         <%= @book.body %>
       </td>
       <td>
-        edit
+        <%= link_to "Edit", edit_book_path(@book) %>
       </td>
       <td>
         <% if @book.user == current_user %>
-         <%= link_to "Destroy", book_path(@book), method: :delete %
+         <%= link_to "Destroy", book_path(@book), method: :delete %>
+        <% end %>
       </td>
     </tr>
   </tbody>
