@@ -4,5 +4,6 @@
   <%= f.text_field :name, autofocus: true, id:"inputName", placeholder:"Name"%>
   <label for="inputImage">ProfileImage</label>
   <%= f.file_field :profile_image, placeholder: "Image", accept: "image/*" %>
+  <%= f.text_area :introduction, 
   <%= f.submit "Update User" %>
 <% end %>
