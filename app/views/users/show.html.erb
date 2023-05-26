@@ -7,11 +7,38 @@
      </tr>
      <tr>
        <th>introduction</th>
-       <th>text</th>
+       <th><%= @user.introduction %></th>
      </tr>
    </tbody>
  </table>
  <div>
    <%= link_to 'Edit', edit_user_path %>
  </div>
- <h2>New book</h2>
+
+<h2>New book</h2>
+ <!--共通部分-->
+
+<h2>Books</h2>
+<% @books.each do |book| %>
+<table>
+ <thead>
+  <tr>
+   <th>Title</th>
+   <th>Option</th>
+  </tr>
+ </thead>
+ <tbody>
+  <tr>
+   <td><!--投稿ユーザー画像-->
+    <%= image_tag book.user.get_profile_image(100,100) %>
+   </td>
+   <td>
+    <%= book.title %>
+   </td>
+   <td>
+    <%= book.body %>
+   </td>
+  </tr>
+ </tbody>
+</table>
+<% end %>
