@@ -1,1 +1,18 @@
-<h1>user一覧</h1>
+<h2>Users</h2><!--user一覧--
+<table>
+  <thead>
+    <tr>
+      <th>image</th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <% @users.each do |user| %>
+  <tbody>
+    <tr>
+      <td><%= user.profile_image %></td>
+      <td><%= user.name %></td>
+      <td><%= link_to 'show', user_path(user) %></td>
+    </tr>
+  </tbody>
+  <% end %>
+</table>
