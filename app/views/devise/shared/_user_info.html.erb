@@ -2,6 +2,9 @@
  <table class="table">
    <tbody>
      <tr>
+      <%= image_tag user.get_profile_image(100,100) %>
+     </tr>
+     <tr>
        <th>name</th>
        <th><%= user.name %></th>
      </tr>
@@ -12,5 +15,5 @@
    </tbody>
  </table>
  <div>
-   <%= link_to 'Edit', edit_user_path %>
+   <%= link_to 'Edit', edit_user_path(current_user) %>
  </div>

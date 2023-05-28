@@ -11,7 +11,7 @@
   </head>
 
   <body>
-    <h3>Bookers2</h3>
+    <a>Bookers</a>
     <header>
     <ul>
      <% if user_signed_in? %>
@@ -42,6 +42,10 @@
     </header>
 
     <%= yield %>
-
+  <footer>
+    <div>
+      <p>CopyRight Infratop.inc</p>
+    </div>
+  </footer>
   </body>
 </html>
