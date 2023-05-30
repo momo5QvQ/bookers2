@@ -1,17 +1,16 @@
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-3">
-    <%= render 'devise/shared/user_info', user: @user %>
-    <%= render 'devise/shared/new_book', book: @book %>
-    </div>
-<div class="col-md-9">
+<div class='col-md-3'>
+ <%= render 'devise/shared/user_info', user: @user %>
+ <%= render 'devise/shared/new_book', book: @book %>
+</div>
+<div class='col-md-8 offset-md-1'>
 <h2>Books</h2>
-<table>
+<table class='table table-hover table-inverse'>
  <thead>
   <tr>
    <th>Title</th>
    <th>Option</th>
+   <th colspan="3"></th>
   </tr>
  </thead>
  <tbody>
@@ -30,6 +29,4 @@
   <% end %>
  </tbody>
 </table>
-</div>
-</div>
 </div>
